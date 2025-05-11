@@ -1,0 +1,21 @@
+server:
+  port: ${SERVER.PORT:8080}
+
+spring.application:
+  name: @project.name@
+  version: @project.version@
+  group: Card Account
+
+spring:
+  threads:
+    virtual:
+      enabled: true
+  profiles:
+    active: prod
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tile_service
+    username: ts_user
+    password: tile_service_user
+  jpa:
+    hibernate:
+      ddl-auto: update
